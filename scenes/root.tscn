@@ -18,4 +18,4 @@ position = Vector2(43, 18)
 [node name="extrovert" parent="." instance=ExtResource("2_fpctu")]
 position = Vector2(1169, 10)
 
-[node name="Node2D_response_options" parent="." instance=ExtResource("5_6drlq")]
+[node name="response_options" parent="." instance=ExtResource("5_6drlq")]
