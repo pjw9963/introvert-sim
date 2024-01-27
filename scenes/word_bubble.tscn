@@ -4,10 +4,11 @@
 [ext_resource type="Script" path="res://scripts/word_bubble.cs" id="1_f8ncu"]
 
 [node name="Node2D_word_bubble" type="Node2D"]
+position = Vector2(125, 73)
 script = ExtResource("1_f8ncu")
 
 [node name="Sprite2D_word_bubble" type="Sprite2D" parent="."]
-position = Vector2(801, 373)
+position = Vector2(284, 190)
 texture = ExtResource("1_08v4w")
 flip_h = true
 

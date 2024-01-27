@@ -6,6 +6,11 @@ public partial class character : Node2D
 	private word_bubble _currentWords;
 	private ProgressBar healthBar;
 	private PackedScene wordBubble = ResourceLoader.Load<PackedScene>("res://scenes/word_bubble.tscn");
+	
+	[Export]
+	public int xPos;
+	[Export]
+	public int yPos;
 
 	public override void _Ready()
 	{
@@ -17,7 +22,7 @@ public partial class character : Node2D
 		if (wordBubble.Instantiate() is word_bubble wordBubbleInstance)
 		{
 			_currentWords = wordBubbleInstance;
-			_currentWords.Position = new Vector2(100, 100); // Set position using the defined property
+			_currentWords.Position = new Vector2(xPos, yPos); // Set position using the defined property
 			_currentWords.LabelText = text; // Set label text using the defined property
 			AddChild(_currentWords);
 		}
