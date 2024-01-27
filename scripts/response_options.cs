@@ -5,7 +5,7 @@ public partial class response_options : Node2D
 {
 
 	[Signal]
-	public delegate void ButtonPressedEventHandler(string buttonName);
+	public delegate void ButtonPressedEventHandler(string buttonText);
 
 	public override void _Ready()
 	{
@@ -20,7 +20,7 @@ public partial class response_options : Node2D
 
 	private void OnButtonPressed(string buttonText)
 	{
-		EmitSignal(nameof(ButtonPressedEventHandler), buttonText);
+		EmitSignal(nameof(ButtonPressed), buttonText);
 	}
 
 }

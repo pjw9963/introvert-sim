@@ -13,12 +13,19 @@ public partial class root : Node2D
 		extrovert = GetNode<character>("extrovert");
 		introvert = GetNode<character>("introvert");
 		options = GetNode<response_options>("response_options");
+
+		options.ButtonPressed += (string buttonText) => HandleButton(buttonText);
 		
 		await ToSignal(GetTree().CreateTimer(5), "timeout");
 		extrovert.TakeDamage(5);
 		extrovert.ShowText("this is an example prompt");
 		await ToSignal(GetTree().CreateTimer(5), "timeout");
 		extrovert.RemoveText();
+	}
+
+	private void HandleButton(string buttonText)
+	{
+		GD.Print("OMG IT WORKED");
 	}
 
 }
