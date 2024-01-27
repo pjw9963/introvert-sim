@@ -3,9 +3,14 @@ using System;
 
 public partial class character : Node2D
 {
-
 	private word_bubble _currentWords;
+	private ProgressBar healthBar;
 	private PackedScene wordBubble = ResourceLoader.Load<PackedScene>("res://scenes/word_bubble.tscn");
+
+	public override void _Ready()
+	{
+		healthBar = GetNode<ProgressBar>("ProgressBar_social_battery");
+	}
 
 	public void ShowText(string text)
 	{
@@ -21,6 +26,11 @@ public partial class character : Node2D
 	public void RemoveText()
 	{
 		_currentWords?.QueueFree();
+	}
+	
+	public void TakeDamage(int damage)
+	{
+		healthBar.Value -= damage;
 	}
 
 }
