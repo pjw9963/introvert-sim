@@ -14,16 +14,25 @@ public partial class cringe_meter : Node2D
 	{
 		this.maxCringePoints = maxCringePoints;
 	}
-	protected int damage(int damageTaken){
+	
+	public int Damage(int damageTaken){
+		while(!cringed){
 			currentCringePoints += damageTaken;
-			Console.WriteLine("You've taken " + damageTaken + " points of damage.");
+			GD.Print("You've taken " + damageTaken + " points of damage.");
 			return currentCringePoints;
+			
 		}
+		return 0;
+	}
+	
+	public int CurHP(){
+		return currentCringePoints;
+	}
 		
-	protected bool loss() {
+	public bool Loss() {
 			if (maxCringePoints == currentCringePoints){
 				cringed = true;
-				Console.WriteLine("Youve cringed!");
+				GD.Print("Youve cringed!");
 				return cringed;
 			}
 			return cringed;
