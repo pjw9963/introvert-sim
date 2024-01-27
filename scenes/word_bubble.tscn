@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://gdlduhnt4x2p"]
+
+[ext_resource type="Texture2D" uid="uid://05fknvh3gmr4" path="res://images/word-bubble.png" id="1_08v4w"]
+
+[node name="Node2D_word_bubble" type="Node2D"]
+
+[node name="Sprite2D_word_bubble" type="Sprite2D" parent="."]
+position = Vector2(801, 373)
+texture = ExtResource("1_08v4w")
+flip_h = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D_word_bubble"]
+anchors_preset = -1
+anchor_left = 0.706
+anchor_top = 0.937
+anchor_right = 0.706
+anchor_bottom = 0.937
+offset_left = -891.8
+offset_top = -655.5
+offset_right = -242.8
+offset_bottom = -333.5
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 54
+text = "This is some example text. Imagine a conversation here."
