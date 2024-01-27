@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgah3diy0by7d"]
+
+[ext_resource type="Texture2D" uid="uid://db6xqo0gvkxn2" path="res://images/background.png" id="1_cwlgp"]
+[ext_resource type="Script" path="res://scripts/root.cs" id="1_p2md0"]
+[ext_resource type="PackedScene" uid="uid://cdrc71lc5n1id" path="res://scenes/character.tscn" id="2_fpctu"]
+[ext_resource type="PackedScene" uid="uid://ca0dyqqfu6jk5" path="res://scenes/response_options.tscn" id="5_6drlq"]
+
+[node name="root" type="Node2D"]
+script = ExtResource("1_p2md0")
+
+[node name="Sprite2D_background" type="Sprite2D" parent="."]
+position = Vector2(964, 544)
+texture = ExtResource("1_cwlgp")
+
+[node name="introvert" parent="." instance=ExtResource("2_fpctu")]
+position = Vector2(43, 18)
+
+[node name="extrovert" parent="." instance=ExtResource("2_fpctu")]
+position = Vector2(1169, 10)
+
+[node name="Node2D_response_options" parent="." instance=ExtResource("5_6drlq")]
