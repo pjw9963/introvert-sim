@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://csgrliinnfja1"]
+
+[ext_resource type="Script" path="res://take_damage.cs" id="1_lthe1"]
+[ext_resource type="Texture2D" uid="uid://e74qfuwvbnef" path="res://icon.svg" id="2_lymk5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lthe1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16765, 15651)
+scale = Vector2(257, 232)
+texture = ExtResource("2_lymk5")
