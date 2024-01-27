@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://gdlduhnt4x2p"]
+[gd_scene load_steps=3 format=3 uid="uid://gdlduhnt4x2p"]
 
 [ext_resource type="Texture2D" uid="uid://05fknvh3gmr4" path="res://images/word-bubble.png" id="1_08v4w"]
+[ext_resource type="Script" path="res://scripts/word_bubble.cs" id="1_f8ncu"]
 
 [node name="Node2D_word_bubble" type="Node2D"]
+script = ExtResource("1_f8ncu")
 
 [node name="Sprite2D_word_bubble" type="Sprite2D" parent="."]
 position = Vector2(801, 373)
