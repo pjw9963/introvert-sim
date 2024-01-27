@@ -4,8 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3fs6y4roias6" path="res://images/green-triangel256.png" id="2_k1hvv"]
 [ext_resource type="Texture2D" uid="uid://caymy1kpmdvp6" path="res://images/mostly-square-peach-32.png" id="3_gm2gv"]
 [ext_resource type="PackedScene" uid="uid://gdlduhnt4x2p" path="res://scenes/word_bubble.tscn" id="4_athhm"]
-
-[sub_resource type="Theme" id="Theme_u84hr"]
+[ext_resource type="PackedScene" uid="uid://ca0dyqqfu6jk5" path="res://scenes/response_options.tscn" id="5_6drlq"]
 
 [node name="root" type="Node2D"]
 
@@ -20,6 +19,14 @@ position = Vector2(389, 511)
 scale = Vector2(1.69531, 2.14844)
 texture = ExtResource("2_k1hvv")
 
+[node name="ProgressBar_social_battery" type="ProgressBar" parent="Node2D_introvert"]
+offset_left = 35.0
+offset_top = 43.0
+offset_right = 524.0
+offset_bottom = 95.0
+value = 85.0
+rounded = true
+
 [node name="Node2D_extrovert" type="Node2D" parent="."]
 
 [node name="Sprite2D_extrovert" type="Sprite2D" parent="Node2D_extrovert"]
@@ -27,27 +34,16 @@ position = Vector2(1523, 531)
 scale = Vector2(14.3438, 16.4688)
 texture = ExtResource("3_gm2gv")
 
+[node name="ProgressBar_cringe_meter" type="ProgressBar" parent="Node2D_extrovert"]
+offset_left = 1369.0
+offset_top = 36.0
+offset_right = 1864.0
+offset_bottom = 85.0
+value = 43.0
+rounded = true
+fill_mode = 1
+
 [node name="Node2D_word_bubble" parent="." instance=ExtResource("4_athhm")]
 position = Vector2(338, 0)
 
-[node name="Node2D_response_options" type="Node2D" parent="."]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Node2D_response_options"]
-offset_left = 50.0
-offset_top = 877.0
-offset_right = 1864.0
-offset_bottom = 1033.0
-alignment = 1
-
-[node name="Button1" type="Button" parent="Node2D_response_options/HBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_u84hr")
-theme_override_colors/icon_normal_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 34
-text = "Flirt"
-
-[node name="Button2" type="Button" parent="Node2D_response_options/HBoxContainer"]
-layout_mode = 2
-
-[node name="Button3" type="Button" parent="Node2D_response_options/HBoxContainer"]
-layout_mode = 2
+[node name="Node2D_response_options" parent="." instance=ExtResource("5_6drlq")]
