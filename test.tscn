@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://csgrliinnfja1"]
+[gd_scene load_steps=4 format=3 uid="uid://csgrliinnfja1"]
 
-[ext_resource type="Script" path="res://take_damage.cs" id="1_lthe1"]
+[ext_resource type="Script" path="res://scripts/random_prompts.cs" id="1_663rp"]
 [ext_resource type="Texture2D" uid="uid://e74qfuwvbnef" path="res://icon.svg" id="2_lymk5"]
+[ext_resource type="Script" path="res://basic_enemy.cs" id="3_kpdp4"]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_lthe1")
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_663rp")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(16765, 15651)
-scale = Vector2(257, 232)
+[node name="\'Enemy1" type="Sprite2D" parent="."]
+scale = Vector2(1.114, 1)
 texture = ExtResource("2_lymk5")
+script = ExtResource("3_kpdp4")
